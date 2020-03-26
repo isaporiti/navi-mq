@@ -1,8 +1,6 @@
 # Navi MQ
 
-![Navi](img/navi.png)
-
-Navi is a library intended to wrap Pika client (https://pika.readthedocs.io/en/stable/) to allow easier communication with AMQP brokers.
+Navi is a library intended to wrap ![Pika client](https://pika.readthedocs.io/en/stable/) to allow easier communication with AMQP brokers.
 
 Its based on providing the user two basic functionalities: `publish` and `listen`. Navi handles AMQP connection management, exchange and queue declarations and bindings, message serialization and headers management so its user doesn't have to and therefore just focus on listeners definition and message publishing.
 
