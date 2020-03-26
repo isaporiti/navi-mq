@@ -42,7 +42,7 @@ if __name__ == "__main__":
 ```
 
 ## FAQs
-- _Why does **NaviPublisher** connects to the broker with **BlockingConnection**, while **NaviListener** does with **SelectConnection**?_ [anchor])=
+- _Why does **NaviPublisher** connects to the broker with **BlockingConnection**, while **NaviListener** does with **SelectConnection**?_
 
     Basically, because that's how it's suggested by [pika docs](https://pika.readthedocs.io/en/stable/examples/comparing_publishing_sync_async.html#comparing-message-publishing-with-blockingconnection-and-selectconnection). `BlockingConnection` is intended to be used for short living connections, as is the case with publishing. They're easier to set up, and don't need any callbacks to execute, when events like the channel being opened occur.
     `SelectConnection`, in turn, is better for the case of a long living connection, and when we need to set up callbacks for events like channel opening, queue declaration, etc.
